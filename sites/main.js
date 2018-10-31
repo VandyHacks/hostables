@@ -2,7 +2,8 @@ const txtFile = new XMLHttpRequest();
 let lines = [];
 let public = [];
 let private = [];
-txtFile.open("GET", "sites.csv", true);
+const csvURL = 'https://gist.githubusercontent.com/cktang88/f251ef684298df9630280e5ec6440841/raw/122275ca4652d18ee75d3865143574dfdfff17d4/sites.csv';
+txtFile.open("GET", csvURL, true);
 txtFile.onreadystatechange = function () {
     if (txtFile.readyState !== 4) // Makes sure the document is ready to parse.
         return;
