@@ -30,13 +30,10 @@ txtFile.onreadystatechange = function() {
             e += '.vandyhacks.org';
             e = e.replace('*', '');
 
-            if (isAdmin && isAdminURL)
-                e = e.bold();
-
             let li = document.createElement('li');
             let link = document.createElement('a');
             link.href = 'https://' + e;
-            link.innerHTML = e;
+            link.innerHTML = (isAdmin && isAdminURL) ? e.bold() : e;
             li.appendChild(link);
             ul.appendChild(li);
         }
