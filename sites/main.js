@@ -1,4 +1,5 @@
 const txtFile = new XMLHttpRequest();
+let lines = [];
 let public = [];
 let private = [];
 txtFile.open("GET", "sites.csv", true);
@@ -7,10 +8,11 @@ txtFile.onreadystatechange = function() {
         return;
     if (txtFile.status !== 200)  // Makes sure it's found the file.
         return;
-    allText = txtFile.responseText;
+
     lines = txtFile.responseText.split("\r\n"); // Will separate each line into an array
     lines = lines.map (e => e.toLowerCase().trim()); // clean a bit
     lines = lines.sort(); // sort
+    console.log(lines)
 
     let ul = document.createElement('ul');
     lines.forEach(e =>  {
