@@ -53,6 +53,11 @@
     </div>
     <script type="text/javascript">
         try {
+            // polyfill endsWith
+            String.prototype.endsWith = function(suffix) {
+                return this.indexOf(suffix, this.length - suffix.length) !== -1;
+            };
+
             var txtFile = new XMLHttpRequest();
             var lines = [];
             var regular = [];
@@ -69,7 +74,9 @@
                 }
 
                 lines = txtFile.responseText.split("\n"); // Will separate each line into an array
-                lines = lines.map(e => e.toLowerCase().trim()); // clean a bit
+                lines.forEach(function (e) {
+                    e = e.toLowerCase().trim()
+                }); // clean a bit
                 lines = lines.sort(); // sort
 
                 var ul = document.createElement("ul");
