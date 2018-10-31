@@ -12,7 +12,6 @@ txtFile.onreadystatechange = function() {
     lines = txtFile.responseText.split("\n"); // Will separate each line into an array
     lines = lines.map (e => e.toLowerCase().trim()); // clean a bit
     lines = lines.sort(); // sort
-    console.log(lines)
 
     let ul = document.createElement('ul');
     lines.forEach(e =>  {
