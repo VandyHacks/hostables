@@ -9,7 +9,7 @@ txtFile.onreadystatechange = function() {
     if (txtFile.status !== 200)  // Makes sure it's found the file.
         return;
 
-    lines = txtFile.responseText.split("\r\n"); // Will separate each line into an array
+    lines = txtFile.responseText.split("\n"); // Will separate each line into an array
     lines = lines.map (e => e.toLowerCase().trim()); // clean a bit
     lines = lines.sort(); // sort
     console.log(lines)
