@@ -1,7 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <!--
     <meta http-equiv="refresh" content="0 url='https://open.spotify.com/user/1253766254/playlist/3dicI6ZHV1yd4i2W4irkXu?si=yowUUs4BTcudusELG4X2Kw'">
+    -->
+    <style>
+        /* Pen-specific styles */
+        html,
+        body,
+        section {
+            height: 100%;
+            margin: auto;
+            padding: auto;
+        }
+
+        body {
+            color: #fff;
+            font-family: sans-serif;
+            font-size: 1.25rem;
+            line-height: 150%;
+            text-align: center;
+            text-shadow: 0 2px 2px #11dbff;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            margin: 0 0 0.75rem 0;
+        }
+
+        /* Pattern styles */
+        .container {
+            display: flex;
+        }
+
+        * {
+            transition: all 0.5s ease;
+        }
+
+        .left-half:hover h1,
+        .right-half:hover h1 {
+            font-size: 300%;
+            text-shadow: 0 .2em .2em #11dbff;
+        }
+
+        .left-half:hover,
+        .right-half:hover {
+            opacity: .8;
+        }
+
+        .left-half {
+            background-color: #105045;
+            flex: 1;
+            padding: 1rem;
+        }
+
+        .right-half {
+            background-color: #490d5c;
+            flex: 1;
+            padding: 1rem;
+        }
+    </style>
 </head>
+
+<body>
+
+
+    <section class="container">
+        <div class="left-half" onclick="location.assign('https://open.spotify.com/user/1253766254/playlist/3dicI6ZHV1yd4i2W4irkXu?si=yowUUs4BTcudusELG4X2Kw');">
+            <article>
+                <h1>Chill</h1>
+            </article>
+        </div>
+        <div class="right-half" onclick="location.assign('https://open.spotify.com/user/1253766254/playlist/4Y64vWJ3ggiToV7U0XZf27?si=KljBza5RTKmr_rwtNZUQOw');">
+            <article>
+                <h1>Hype</h1>
+            </article>
+        </div>
+    </section>
+</body>
+
 </html>
